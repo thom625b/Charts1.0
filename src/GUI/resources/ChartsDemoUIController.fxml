@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller.MainController.ChartsDemoUIController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowBarChart" text="Show Bar Chart" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowLineChart" text="Show Line Chart" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowPieChart" text="Show Pie Chart" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowAreaChart" text="Show Area Chart" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowScatterChart" text="Show Scatter Chart" />
+              <MenuItem mnemonicParsing="false" onAction="#handleClose" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleUpdateData" text="Update data" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+
+    <center>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+            <Label text="Enter Drinks Sold (Monday to Sunday)" />
+            <TextField fx:id="monInput" promptText="Monday" prefWidth="100" maxWidth="100" />
+            <TextField fx:id="tueInput" promptText="Tuesday" prefWidth="100" maxWidth="100" />
+            <TextField fx:id="wedInput" promptText="Wednesday" prefWidth="100" maxWidth="100"/>
+            <TextField fx:id="thuInput" promptText="Thursday" prefWidth="100" maxWidth="100"/>
+            <TextField fx:id="friInput" promptText="Friday" prefWidth="100" maxWidth="100"/>
+            <TextField fx:id="satInput" promptText="Saturday" prefWidth="100" maxWidth="100"/>
+            <TextField fx:id="sunInput" promptText="Sunday" prefWidth="100" maxWidth="100"/>
+            <Button text="Update Scatter Chart" onAction="#handleRefreshScatterChart" />
+        </VBox>
+    </center>
+
+
+    <center>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+            <HBox spacing="5">
+                <TextField fx:id="productAInputName" promptText="Product A Name" prefWidth="100" maxWidth="100" />
+                <TextField fx:id="productAInput" promptText="Product A Value" prefWidth="100" maxWidth="100" />
+            </HBox>
+            <HBox spacing="5">
+                <TextField fx:id="productBInputName" promptText="Product B Name" prefWidth="100" maxWidth="100" />
+                <TextField fx:id="productBInput" promptText="Product B Value" prefWidth="100" maxWidth="100" />
+            </HBox>
+            <HBox spacing="5">
+                <TextField fx:id="productCInputName" promptText="Product C Name" prefWidth="100" maxWidth="100" />
+                <TextField fx:id="productCInput" promptText="Product C Value" prefWidth="100" maxWidth="100" />
+            </HBox>
+            <HBox spacing="5">
+                <TextField fx:id="productDInputName" promptText="Product D Name" prefWidth="100" maxWidth="100" />
+                <TextField fx:id="productDInput" promptText="Product D Value" prefWidth="100" maxWidth="100" />
+            </HBox>
+            <HBox spacing="5">
+                <TextField fx:id="productEInputName" promptText="Product E Name" prefWidth="100" maxWidth="100" />
+                <TextField fx:id="productEInput" promptText="Product E Value" prefWidth="100" maxWidth="100" />
+            </HBox>
+            <Button text="Update Pie Chart" onAction="#handleRefreshPieChart" />
+        </VBox>
+
+    </center>
+</BorderPane>
